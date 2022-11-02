@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        #btn-alert {
+            border: none;
+            border-radius: 5px;
+            padding: 7px 10px;
+            background-color: rgb(37, 116, 226);
+            font-size: 1.3em;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s;
+            position: fixed;
+            left: 45%;
+            top: 45%;
+        }
+        
+        #btn-alert:hover {
+            opacity: 0.8;
+        }
+        
+        #btn-alert:focus {
+            outline: rgb(37, 116, 226) solid 3px;
+            outline-offset: 3px;
+        }
+        
+        @media (max-width: 576px) {
+            #btn-alert {
+                left: 38%;
+            }
+        }
+    </style>
+
+    <title>Happy Birthday Novalia</title>
+</head>
+
+<body>
+
+    <button id="btn-alert" onclick="munculinAlert()">Klik Yaa!</button>
+
+    <script>
+        async function munculinAlert() {
+            await Swal.fire('Buat kamu yang pernah Mengisi hariku, gamasuk akal buatku berpura-pura lupa sama hari spesialmu')
+            await Swal.fire('Aku ucapin diusiamu yang baru')
+            await Swal.fire({
+                title: 'Selamat Ulang tahun yaa🤗',
+                text: 'Semoga di hari kelahiranmu ini kamu selalu diiringi dengan kebahagiaan dan kebaikan.',
+                imageUrl: 'Assets/1.jpeg',
+                imageWidth: 400,
+                imageHeight: 300,
+                imageAlt: 'Gambar',
+            })
+            await Swal.fire({
+                title: 'Maafin aku gak?',
+                text: "Tolong jawab yang jujur ya",
+                icon: 'question',
+                showDenyButton: true,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Iya Dimaafin',
+                denyButtonText: `Gak !`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Apakabar cantiik?🤗',
+                        text: 'Makasii yaa Aku harap kamu bahagia terus, khususnya hari ini. Aku berdoa dari hatiku yang paling dalam bahwa semua impian yang kamu dambakan akan terwujud:) Saat ini, kita memang mempunyai kehidupan masing-masing, dan aku yakin bahwa ini bagian dari jalan yang terbaik. Bareng kamu aku belajar banyak hal, dan aku masih menyimpan rasa sayang buat kamu. Sekali lagi, Selamat ulang tahun yaa cantik :) Semangat Kuliahnya! Janji Smester ini harus IPK 4 yaa :), Semangaaat jalanin Aktifitasnya, Semangat semuanyaadeeh.',
+                        imageUrl: 'Assets/2.jpeg',
+                        imageWidth: 500,
+                        imageHeight: 700,
+                        imageAlt: 'Gambar loli bahagia',
+                    })
+                } else {
+                    Swal.fire({
+                        title: 'Maaf Yaa😢',
+                        text: 'Maafin akuu yaa, aku yang selalu egois, keras kepala, gaperna bisa ngertiin kamu. Aku bener-bener gelisah gada kamu, mungkin belum terbiasa untuk sendiri. Aku berharap suatu saat nanti kita bisa bareng lagii yaa, bisa gapai cita-cita kita (terutama punya danuarta junior hehe).Maaf aku banyak ingkar janjinyaa, banyak tempat-tempat yang belum kita didatengin:(, itu semua karna ulah diriku yang egois ini. Buat kedepannya mungkin aku bakal tetep sendiri sebelum kamu punya pasangan, karna emng aku males kenal orang baru yang sebaik kamu, seperhatian kamu. Beruntung banged aku pernah jadi bagian dihidup kamu. Aku bisa kenal sama kota ini berkat kamu.  aku maaf yaa, aku gagal jadi cowo kamu, aku gagal jagain kamu. Aku harap kamu ambil hal-hal yang positif dariku, Buang aja yg negatifnyaa. Banyak banged yaa kesalahan aku, tapi gapapa biar doa-doa aku yang jadi penebusnyaa.',
+                        imageUrl: 'Assets/3.jpeg',
+                        imageWidth: 400,
+                        imageHeight: 300,
+                        imageAlt: 'Gambar loli sedih',
+                    })
+                }
+            })
+        }
+    </script>
+
+</body>
+
+</html>
